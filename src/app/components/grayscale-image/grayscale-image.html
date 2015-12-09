@@ -1,0 +1,6 @@
+<!--<md-button ng-click="uploadData()" flex>Считать из файла</md-button>-->
+<div id="drop-zone" flex>
+    {{fileName}}
+    <md-progress-linear class="md-warn" md-mode="buffer" value="{{determinateValue}}"
+                        md-buffer-value="{{determinateValue2}}" ng-show="startLoading"></md-progress-linear>
+</div>

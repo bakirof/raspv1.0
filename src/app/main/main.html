@@ -1,0 +1,75 @@
+<md-content>
+  <div layout="row" layout-align="start start">
+    <div class="menu">
+      <div class="main-inputs">
+        <div layout="row" layout-align="space-around center" layout-sm="column">
+          <md-input-container flex>
+            <label>a1</label>
+            <input ng-model="a1" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+          <md-input-container flex>
+            <label>a2</label>
+            <input ng-model="a2" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+          <md-input-container flex>
+            <label>a3</label>
+            <input ng-model="a3" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+        </div>
+        <div layout="row" layout-align="space-around center" layout-sm="column">
+          <md-input-container flex>
+            <label>b1</label>
+            <input ng-model="b1" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+          <md-input-container flex>
+            <label>b2</label>
+            <input ng-model="b2" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+          <md-input-container flex>
+            <label>b3</label>
+            <input ng-model="b3" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+        </div>
+        <div layout="row" layout-align="space-around center" layout-sm="column">
+          <md-input-container flex>
+            <label>x0</label>
+            <input ng-model="xo" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+          <md-input-container flex>
+            <label>xk</label>
+            <input ng-model="xk" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+          <md-input-container flex>
+            <label>dx</label>
+            <input ng-model="dx" ng-model-options="{ debounce: 1500 }" ng-change="changedInputField()">
+          </md-input-container>
+        </div>
+        <div layout="row" layout-align="space-around center" layout-md="column" layout-sm="column">
+          <ev-input-file></ev-input-file>
+        </div>
+        <div layout="row" layout-align="space-around center" layout-md="column" layout-sm="column">
+          <md-button ng-click="saveFile()" flex>Записать в файл</md-button>
+        </div>
+      </div>
+      <div layout="row">
+        <div class="list-points">
+          <div ng-repeat="point in points track by $index" flex>
+            <div layout="row" layout-align="space-around center" layout-sm="column">
+              <md-input-container flex>
+                <label>x</label>
+                <input ng-model-options="{ debounce: 1500 }" ng-model="point.x" ng-change="updateX($index, point.x)">
+              </md-input-container>
+              <md-input-container flex>
+                <label>y</label>
+                <input ng-model-options="{ debounce: 1500 }" ng-model="point.y" ng-change="updateY($index, point.y)">
+              </md-input-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div flex class="graph">
+      <graph-canvas pow="pow" points="points"></graph-canvas>
+    </div>
+  </div>
+</md-content>

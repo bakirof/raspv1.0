@@ -1,0 +1,84 @@
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+.graph {
+  height: 650px;
+  background-color: #E0F7FA;
+  padding: 20px;
+}
+
+.main-inputs {
+  background-color: #006064;
+  color: #E0F7FA !important;
+  padding: 10px;
+  border-color: #B2EBF2;
+  font-size: 20px;
+}
+
+md-input-container:not(.md-input-invalid).md-input-has-value label {
+  color: #E0F7FA;
+}
+
+md-input-container .md-input {
+  color: #E0F7FA;
+}
+
+md-input-container label, md-input-container .md-placeholder {
+  color: #E0F7FA;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused label {
+  color: #E0F7FA;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+  border-color: #E0F7FA;
+}
+
+md-input-container {
+  padding-bottom: 10px;
+}
+
+.list-values {
+  padding: 15px;
+}
+
+.list-points {
+  font-size: 20px;
+  padding: 20px;
+  background-color: #00838F;
+  width: 100%;
+  height: 265px;
+}
+
+.list-points {
+  overflow-y: scroll;
+}
+
+#drop-zone {
+  font-size: 16px;
+  padding: 20px 30px;
+  color: #00ACC1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  border: 2px dashed #00ACC1;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.menu {
+  width: 250px;
+}
+
+.list-points::-webkit-scrollbar {
+  width: 0;
+}
+
+input {
+  text-align: center;
+}
